@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8813a442-e3b5-4417-b7ca-1764d6a17971" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1rFvcXKXV2y6yJdccq5mh9IWy8j" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="/usr/local/bin/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="show.inlinked.gradle.project.popup" value="false" />
+    <property name="show.unlinked.gradle.project.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.material.fs.exceptions" />
+      <recent name="com.material.fs.cli.commands" />
+      <recent name="com.material.fs.filesystem.traversal" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CLI (1)">
+    <configuration name="CLI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.cli.CLI" />
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.cli.commands.CLI" />
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.cli.commands.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.cli.CLI" />
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EditorView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.editor.EditorView" />
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.editor.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemTest.testCopyFileAbsolute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.filesystem.traversal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemTest" />
+      <option name="METHOD_NAME" value="testCopyFileAbsolute" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemTest.testMoveDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.filesystem.traversal.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemTest" />
+      <option name="METHOD_NAME" value="testMoveDirectory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CLI (1)" />
+        <item itemvalue="Application.CLI" />
+        <item itemvalue="Application.EditorView" />
+        <item itemvalue="JUnit.FileSystemTest.testCopyFileAbsolute" />
+        <item itemvalue="JUnit.FileSystemTest.testMoveDirectory" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8813a442-e3b5-4417-b7ca-1764d6a17971" name="Default Changelist" comment="" />
+      <created>1618584731140</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618584731140</updated>
+      <workItem from="1618584736274" duration="43906000" />
+      <workItem from="1618758335035" duration="9790000" />
+    </task>
+    <servers>
+      <JIRA url="https://jira01.corp.linkedin.com:8443">
+        <username>lcarmody</username>
+      </JIRA>
+    </servers>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser" timestamp="1618766841471">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser/0.25.2560.1415@0.25.2560.1415" timestamp="1618766841471" />
+    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618628550239">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618628550239" />
+    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618759517440">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618759517440" />
+    <state x="1063" y="573" key="#xdebugger.evaluate" timestamp="1618765831592">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="1063" y="573" key="#xdebugger.evaluate/0.25.2560.1415@0.25.2560.1415" timestamp="1618765831592" />
+    <state width="2518" height="489" key="GridCell.Tab.0.bottom" timestamp="1618771251440">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
+    <state width="2518" height="489" key="GridCell.Tab.0.center" timestamp="1618771251440">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
+    <state width="2518" height="489" key="GridCell.Tab.0.left" timestamp="1618771251439">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251439" />
+    <state width="2518" height="489" key="GridCell.Tab.0.right" timestamp="1618771251440">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
+    <state width="2518" height="489" key="GridCell.Tab.1.bottom" timestamp="1618771251389">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.1.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251389" />
+    <state width="2518" height="489" key="GridCell.Tab.1.center" timestamp="1618771251388">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.1.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251388" />
+    <state width="2518" height="489" key="GridCell.Tab.1.left" timestamp="1618771251388">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.1.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251388" />
+    <state width="2518" height="489" key="GridCell.Tab.1.right" timestamp="1618771251389">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state width="2518" height="489" key="GridCell.Tab.1.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251389" />
+    <state x="818" y="391" key="Maven.ArtifactSearchDialog" timestamp="1618585282912">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="818" y="391" key="Maven.ArtifactSearchDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618585282912" />
+    <state x="959" y="561" key="com.intellij.ide.util.TipDialog" timestamp="1618758375117">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="959" y="561" key="com.intellij.ide.util.TipDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618758375117" />
+    <state x="911" y="489" width="738" height="486" key="find.popup" timestamp="1618764833771">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="911" y="489" width="738" height="486" key="find.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1618764833771" />
+    <state x="987" y="343" key="refactoring.ChangeSignatureDialog" timestamp="1618687203574">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="987" y="343" key="refactoring.ChangeSignatureDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618687203574" />
+    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup" timestamp="1618611816196">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1618611816196" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverserRecursive.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Directory.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

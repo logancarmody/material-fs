@@ -1,0 +1,3 @@
+com/material/fs/cli/CLI.class
+com/material/fs/cli/commands/Command.class
+com/material/fs/App.class
