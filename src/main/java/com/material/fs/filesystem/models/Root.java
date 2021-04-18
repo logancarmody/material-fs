@@ -1,4 +1,4 @@
-package com.material.fs.filesystem;
+package com.material.fs.filesystem.models;
 
 import java.util.Optional;
 

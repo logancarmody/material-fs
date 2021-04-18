@@ -1,8 +1,12 @@
 package com.material.fs.cli.commands;
 
-import com.material.fs.filesystem.Directory;
+import com.material.fs.filesystem.models.Directory;
 
 
+/**
+ * This is the model returned by {@link Command}s.
+ * It contains the message, whether the response was an error, and the new CWG
+ */
 public class CommandResponse {
   private final String message;
   private final boolean isError;
@@ -14,11 +18,14 @@ public class CommandResponse {
     this.cwg = cwg;
   }
 
+  /**
+   * @return the Current Working Directory which is the result from the Command.
+   */
   public Directory getCwg() {
     return cwg;
   }
 
-  // TODO convert this to printer
+  @Override
   public String toString() {
     StringBuilder stringBuilder = new StringBuilder();
     if (isError) {

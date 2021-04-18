@@ -1,6 +1,6 @@
 package com.material.fs.editor;
 
-import com.material.fs.filesystem.ContentFile;
+import com.material.fs.filesystem.models.ContentFile;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -8,22 +8,22 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.OceanTheme;
 
 
+/**
+ * Text editor UI class
+ * This will launch a JFrame text editor
+ */
 public class EditorView extends JFrame implements ActionListener {
-  // Text component
-  JTextArea _textArea;
+  private static final String SAVE = "Save";
+  private static final String CLOSE = "Close";
 
-  // Frame
-  JFrame _frame;
-
+  private JTextArea _textArea;
+  private JFrame _frame;
   private ContentFile _contentFile;
-
   private boolean _isEditing;
 
   public EditorView(ContentFile contentFile) {
     _contentFile = contentFile;
     _isEditing = true;
-
-    // Create a frame
     _frame = new JFrame("Edit: " + contentFile.getName());
 
     try {
@@ -32,6 +32,7 @@ public class EditorView extends JFrame implements ActionListener {
       MetalLookAndFeel.setCurrentTheme(new OceanTheme());
     }
     catch (Exception e) {
+      //swallow
     }
 
     // Text component
@@ -60,14 +61,17 @@ public class EditorView extends JFrame implements ActionListener {
   @Override
   public void actionPerformed(ActionEvent e) {
     String s = e.getActionCommand();
-    if (s.equals("Save")) {
+    if (s.equals(SAVE)) {
       _contentFile.setContent(_textArea.getText());
-    } else if (s.equals("Close")) {
+    } else if (s.equals(CLOSE)) {
       _frame.dispose();
       _isEditing = false;
     }
   }
 
+  /**
+   * Returns true if the user has not hit the closed button yet.
+   */
   public boolean isEditing() {
     return _isEditing;
   }

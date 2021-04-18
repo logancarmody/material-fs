@@ -1,6 +1,6 @@
-package com.material.fs.filesystem;
+package com.material.fs.filesystem.models;
 
-import com.material.fs.exceptions.InvalidFileTypeException;
+import com.material.fs.filesystem.exceptions.InvalidFileTypeException;
 
 
 public abstract class File implements Comparable<File> {
@@ -35,7 +35,7 @@ public abstract class File implements Comparable<File> {
     return this;
   }
 
-  abstract File deepCopy();
+  public abstract File deepCopy();
 
   public String print() {
     StringBuilder stringBuilder = new StringBuilder();
@@ -54,15 +54,23 @@ public abstract class File implements Comparable<File> {
         .append("\n");
   }
 
+  public boolean isContentFile() {
+    return this instanceof ContentFile;
+  }
+
   public ContentFile getContentFile() {
-    if (!(this instanceof ContentFile)) {
+    if (!isContentFile()) {
       throw new InvalidFileTypeException(String.format("%s is not a content file.", getName()));
     }
     return (ContentFile) this;
   }
 
+  public boolean isDirectory() {
+    return this instanceof Directory;
+  }
+
   public Directory getDirectory() {
-    if (!(this instanceof Directory)) {
+    if (!isDirectory()) {
       throw new InvalidFileTypeException(String.format("%s is not a directory.", getName()));
     }
     return (Directory) this;

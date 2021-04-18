@@ -1,4 +1,4 @@
-package com.material.fs.filesystem;
+package com.material.fs.filesystem.models;
 
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public class ContentFile extends File {
   }
 
   @Override
-  File deepCopy() {
+  public File deepCopy() {
     return new ContentFile(_parent, _name, _content);
   }
 

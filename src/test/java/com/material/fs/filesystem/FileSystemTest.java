@@ -1,5 +1,7 @@
 package com.material.fs.filesystem;
 
+import com.material.fs.filesystem.models.Directory;
+import com.material.fs.filesystem.models.File;
 import org.junit.Test;
 
 

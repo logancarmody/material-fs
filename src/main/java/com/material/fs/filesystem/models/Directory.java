@@ -1,6 +1,6 @@
-package com.material.fs.filesystem;
+package com.material.fs.filesystem.models;
 
-import com.material.fs.exceptions.FileExistsException;
+import com.material.fs.filesystem.exceptions.FileExistsException;
 import com.material.fs.filesystem.util.Constants;
 import java.util.Collection;
 import java.util.Iterator;
@@ -29,7 +29,7 @@ public class Directory extends File {
   }
 
   @Override
-  File deepCopy() {
+  public File deepCopy() {
     Map<String, File> newContents = _contents.values().stream()
         .map(File::deepCopy)
         .collect(Collectors.toMap(File::getName, Function.identity(), (left, right) -> left, TreeMap::new));

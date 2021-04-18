@@ -1,7 +1,4 @@
-package com.material.fs.exceptions;
-
-import com.material.fs.filesystem.File;
-
+package com.material.fs.filesystem.exceptions;
 
 public class InvalidFileNameException extends RuntimeException {
   public InvalidFileNameException(String filename) {

@@ -2,16 +2,17 @@ package com.material.fs.cli.commands;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-import com.material.fs.filesystem.Directory;
-import com.material.fs.filesystem.File;
+import com.material.fs.filesystem.models.Directory;
+import com.material.fs.filesystem.models.File;
 import com.material.fs.filesystem.Filesystem;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
 
 public class ListFiles extends Command {
+
   @Override
-  public CommandResponse run(String[] params, Directory cwg, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
     ListFilesCommand listFilesCommand = new ListFilesCommand();
     JCommander jCommander = JCommander.newBuilder()
         .addCommand("ls", listFilesCommand)
@@ -22,13 +23,13 @@ public class ListFiles extends Command {
     Collection<File> resultingChildren;
 
     if (listFilesCommand.pathToListFiles != null) {
-      resultingChildren = filesystem.getDirsChildren(cwg, listFilesCommand.pathToListFiles);
+      resultingChildren = filesystem.getDirsChildren(cwd, listFilesCommand.pathToListFiles);
     } else {
-      resultingChildren = filesystem.getDirsChildren(cwg);
+      resultingChildren = filesystem.getDirsChildren(cwd);
     }
 
     String result = resultingChildren.stream().map(File::toString).collect(Collectors.joining("\t\t"));
-    return new CommandResponse(result, false, cwg);
+    return new CommandResponse(result, false, cwd);
   }
 
   @Override

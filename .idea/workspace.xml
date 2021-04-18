@@ -2,8 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8813a442-e3b5-4417-b7ca-1764d6a17971" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSMRecursive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/AllMatchingFilesTSM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/FirstMatchingFileTSM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/SearchTSM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/CLI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/StateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/StateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ChangeDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ChangeDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CommandResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CommandResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CopyFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CreateFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CreateFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/EditFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/EditFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ListFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ListFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MakeDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MakeDirectory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MoveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/RemoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/RemoveFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/EditorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/EditorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/TextEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/BadPathException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/BadPathException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/FileExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/FileExistsException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/IllegalOperationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/IllegalOperationException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/InvalidFileNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/InvalidFileNameException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/InvalidFileTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/InvalidFileTypeException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/ContentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/ContentFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Filesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Filesystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Root.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Root.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Traversable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverserRecursive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileCreationPathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileCreationPathTraverserRecursive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileSystemTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileSystemTraverser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/PathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/PathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/Traverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/TraversalStateManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +95,9 @@
     <property name="show.unlinked.gradle.project.popup" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.material.fs.filesystem" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.material.fs.exceptions" />
       <recent name="com.material.fs.cli.commands" />
@@ -117,7 +161,7 @@
       <module name="material-fs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.material.fs.filesystem.traversal.*" />
+          <option name="PATTERN" value="com.material.fs.filesystem.traversal.state.path.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,7 +177,7 @@
       <module name="material-fs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.material.fs.filesystem.traversal.*" />
+          <option name="PATTERN" value="com.material.fs.filesystem.traversal.state.path.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,7 +210,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618584731140</updated>
       <workItem from="1618584736274" duration="43906000" />
-      <workItem from="1618758335035" duration="10098000" />
+      <workItem from="1618758335035" duration="16820000" />
     </task>
     <servers>
       <JIRA url="https://jira01.corp.linkedin.com:8443">
@@ -178,18 +222,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser" timestamp="1618766841471">
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser" timestamp="1618776147419">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser/0.25.2560.1415@0.25.2560.1415" timestamp="1618766841471" />
-    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618628550239">
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser/0.25.2560.1415@0.25.2560.1415" timestamp="1618776147419" />
+    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618772961561">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618628550239" />
-    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618759517440">
+    <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618772961561" />
+    <state x="1054" y="617" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1618772963176">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618759517440" />
+    <state x="1054" y="617" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.25.2560.1415@0.25.2560.1415" timestamp="1618772963176" />
+    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618774225988">
+      <screen x="0" y="25" width="2560" height="1415" />
+    </state>
+    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618774225988" />
     <state x="1063" y="573" key="#xdebugger.evaluate" timestamp="1618765831592">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -251,12 +299,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverserRecursive.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Directory.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java</url>
           <line>55</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>

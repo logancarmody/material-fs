@@ -1,11 +1,16 @@
 package com.material.fs.editor;
 
-import com.material.fs.filesystem.ContentFile;
+import com.material.fs.filesystem.models.ContentFile;
 
 
 public class TextEditor {
 
-  public void renderFile(ContentFile file) {
+  /**
+   * Renders a {@link EditorView}.
+   * This method will block until the editing is complete.
+   * For a single-threaded file-system, this is just to prevent further changes while editing a file.
+   */
+  public void blockingRenderFile(ContentFile file) {
     EditorView editorView = new EditorView(file);
 
     // Prevent taking other FS actions while editing a file

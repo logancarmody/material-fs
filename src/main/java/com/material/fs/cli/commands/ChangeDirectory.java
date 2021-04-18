@@ -1,6 +1,6 @@
 package com.material.fs.cli.commands;
 
-import com.material.fs.filesystem.Directory;
+import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.Filesystem;
 
 

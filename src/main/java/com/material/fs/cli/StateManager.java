@@ -1,6 +1,5 @@
 package com.material.fs.cli;
 
-import com.google.common.collect.ImmutableMap;
 import com.material.fs.cli.commands.ChangeDirectory;
 import com.material.fs.cli.commands.Command;
 import com.material.fs.cli.commands.CommandResponse;
@@ -11,30 +10,39 @@ import com.material.fs.cli.commands.ListFiles;
 import com.material.fs.cli.commands.MakeDirectory;
 import com.material.fs.cli.commands.MoveFile;
 import com.material.fs.cli.commands.RemoveFile;
-import com.material.fs.filesystem.Directory;
+import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.Filesystem;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
+/**
+ * This is the core StateManager of the FS CLI.
+ * It's responsibility:
+ *   - mapping String arrays parsed from {@link CLI} to the proper {@link Command} class
+ *   - maintaining the Current Working Directory of the CLI
+ *   - parsing the responses from the commands and updating the CWG when necessary
+ */
 public class StateManager {
-  private static Map<String, Command> _commandMap = ImmutableMap.<String, Command>builder()
-      .put("mkdir", new MakeDirectory())
-      .put("ls", new ListFiles())
-      .put("cd", new ChangeDirectory())
-      .put("create", new CreateFile())
-      .put("edit", new EditFile())
-      .put("move", new MoveFile())
-      .put("copy", new CopyFile())
-      .put("rm", new RemoveFile())
-      .build();
+  private static Map<String, Command> _commandMap = Stream.of(new MakeDirectory(),
+      new ListFiles(),
+      new ChangeDirectory(),
+      new CreateFile(),
+      new EditFile(),
+      new MoveFile(),
+      new CopyFile(),
+      new RemoveFile())
+      .collect(Collectors.toMap(Command::getName, Function.identity()));
 
   private final Filesystem _filesystem;
-  private Directory _cwg;
+  private Directory _cwd;
 
   public StateManager() {
     _filesystem = new Filesystem();
-    _cwg = _filesystem.getRootDirectory();
+    _cwd = _filesystem.getRootDirectory();
   }
 
   public String runCommand(String[] commandAry) {
@@ -46,14 +54,14 @@ public class StateManager {
 
     return Optional.ofNullable(_commandMap.get(baseCommand))
         .map(command -> {
-          CommandResponse cr = command.runCommand(commandAry, _cwg, _filesystem);
-          _cwg = cr.getCwg();
+          CommandResponse cr = command.runCommand(commandAry, _cwd, _filesystem);
+          _cwd = cr.getCwg();
           return cr.toString();
         })
         .orElseGet(() -> String.format("Error: %s is not a valid command.", baseCommand));
   }
 
-  public Directory getCwg() {
-    return _cwg;
+  public Directory getCwd() {
+    return _cwd;
   }
 }

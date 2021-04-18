@@ -1,6 +1,6 @@
-package com.material.fs.exceptions;
+package com.material.fs.filesystem.exceptions;
 
-import com.material.fs.filesystem.File;
+import com.material.fs.filesystem.models.File;
 
 
 public class FileExistsException extends RuntimeException {

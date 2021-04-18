@@ -2,14 +2,14 @@ package com.material.fs.cli.commands;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-import com.material.fs.filesystem.Directory;
+import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.Filesystem;
 import java.util.Optional;
 
 
 public class MoveFile extends Command {
   @Override
-  public CommandResponse run(String[] params, Directory cwg, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
     MoveFileCommand moveFileCommand = new MoveFileCommand();
 
     JCommander jCommander = JCommander.newBuilder()
@@ -18,10 +18,10 @@ public class MoveFile extends Command {
 
     jCommander.parse(params);
 
-    filesystem.moveFile(cwg, moveFileCommand.startingFile, moveFileCommand.endDirectory,
+    filesystem.moveFile(cwd, moveFileCommand.startingFile, moveFileCommand.endDirectory,
         Optional.ofNullable(moveFileCommand.newName), moveFileCommand.recursive);
 
-    return new CommandResponse("Moved file successfully", false, cwg);
+    return new CommandResponse("Moved file successfully", false, cwd);
   }
 
   @Override

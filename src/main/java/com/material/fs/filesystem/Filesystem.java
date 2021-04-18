@@ -1,14 +1,18 @@
 package com.material.fs.filesystem;
 
 import com.material.fs.editor.TextEditor;
-import com.material.fs.exceptions.IllegalOperationException;
-import com.material.fs.exceptions.InvalidFileNameException;
-import com.material.fs.filesystem.traversal.DirectoryCreationPathTraverser;
-import com.material.fs.filesystem.traversal.DirectoryCreationPathTraverserRecursive;
-import com.material.fs.filesystem.traversal.FileCreationPathTraverserRecursive;
-import com.material.fs.filesystem.traversal.FileCreationPathTraverser;
+import com.material.fs.filesystem.exceptions.IllegalOperationException;
+import com.material.fs.filesystem.exceptions.InvalidFileNameException;
+import com.material.fs.filesystem.models.ContentFile;
+import com.material.fs.filesystem.models.Directory;
+import com.material.fs.filesystem.models.File;
+import com.material.fs.filesystem.models.Root;
+import com.material.fs.filesystem.traversal.state.path.DirectoryCreationPathTSM;
+import com.material.fs.filesystem.traversal.state.path.DirectoryCreationPathTSMRecursive;
+import com.material.fs.filesystem.traversal.state.path.FileCreationPathTSMRecursive;
+import com.material.fs.filesystem.traversal.state.path.FileCreationPathTSM;
 import com.material.fs.filesystem.traversal.FileSystemTraverser;
-import com.material.fs.filesystem.traversal.PathTraverser;
+import com.material.fs.filesystem.traversal.state.path.PathTSM;
 import com.material.fs.filesystem.util.FilenameUtil;
 import java.util.Collection;
 import java.util.LinkedList;
@@ -16,16 +20,9 @@ import java.util.Optional;
 
 
 /**
- * Methods to implement
  *
- * Create files
- *    create file in cwd
- *    create file at path
- *        relative
- *        absolute
  */
 public class Filesystem {
-  // VISIBLE FOR TESTING
   final Directory EOF;
   final Root _root;
   final FileSystemTraverser _traverser;
@@ -38,19 +35,19 @@ public class Filesystem {
     _textEditor = new TextEditor();
   }
 
-  public String cwd(File file) {
-    // TODO handle orphaned file
-    if (file == _root) {
+  public String cwd(Directory cwd) {
+    if (cwd == _root) {
       return _root.getName();
     }
 
     LinkedList<String> path = new LinkedList<>();
-    path.add(file.getName());
-    File parent = file.getParent();
+    path.add(cwd.getName());
+    File parent = cwd.getParent();
     while (parent != EOF) {
       path.addFirst(parent.getName());
       parent = parent.getParent();
     }
+
     // TODO potentially memoize FQN
     return String.join("/", path);
   }
@@ -64,10 +61,10 @@ public class Filesystem {
   }
 
   private File getFileAtPath(Directory cwd, String path) {
-    return _traverser.traverse(cwd, path, PathTraverser::new);
+    return _traverser.traversePath(cwd, path, PathTSM::new);
   }
 
-  public ContentFile getContentFileAtPath(Directory cwd, String path) {
+  private ContentFile getContentFileAtPath(Directory cwd, String path) {
     return getFileAtPath(cwd, path).getContentFile();
   }
 
@@ -75,27 +72,17 @@ public class Filesystem {
     return getFileAtPath(cwd, path).getDirectory();
   }
 
-  public ContentFile createEmptyFile(Directory cwd, String path, boolean createAlongPath) {
-    if (!FilenameUtil.isValidFilePath(path)) {
-      throw new RuntimeException();
-    }
-
-    return  _traverser.traverse(cwd, path, createAlongPath
-        ? FileCreationPathTraverserRecursive::new
-        : FileCreationPathTraverser::new).getContentFile();
-  }
-
   public ContentFile createFile(Directory cwd, String path, boolean createAlongPath, boolean openForEditing) {
     if (!FilenameUtil.isValidFilePath(path)) {
       throw new InvalidFileNameException(path);
     }
 
-    ContentFile contentFile = _traverser.traverse(cwd, path, createAlongPath
-        ? FileCreationPathTraverserRecursive::new
-        : FileCreationPathTraverser::new).getContentFile();
+    ContentFile contentFile = _traverser.traversePath(cwd, path, createAlongPath
+        ? FileCreationPathTSMRecursive::new
+        : FileCreationPathTSM::new).getContentFile();
 
     if (openForEditing) {
-      _textEditor.renderFile(contentFile);
+      _textEditor.blockingRenderFile(contentFile);
     }
 
     return contentFile;
@@ -104,14 +91,14 @@ public class Filesystem {
   public void editFile(Directory cwg, String path) {
     ContentFile contentFile = getContentFileAtPath(cwg, path);
 
-    _textEditor.renderFile(contentFile);
+    _textEditor.blockingRenderFile(contentFile);
   }
 
   public Directory createDirectory(Directory cwd, String path, boolean createAlongPath) {
     synchronized (_root) {
-      return _traverser.traverse(cwd, path, createAlongPath
-          ? DirectoryCreationPathTraverserRecursive::new
-          : DirectoryCreationPathTraverser::new).getDirectory();
+      return _traverser.traversePath(cwd, path, createAlongPath
+          ? DirectoryCreationPathTSMRecursive::new
+          : DirectoryCreationPathTSM::new).getDirectory();
     }
   }
 

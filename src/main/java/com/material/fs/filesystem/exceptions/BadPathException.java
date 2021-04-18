@@ -1,4 +1,4 @@
-package com.material.fs.exceptions;
+package com.material.fs.filesystem.exceptions;
 
 public class BadPathException extends RuntimeException {
   public BadPathException(String path) {

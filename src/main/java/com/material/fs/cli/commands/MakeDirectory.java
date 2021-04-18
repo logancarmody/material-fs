@@ -2,7 +2,7 @@ package com.material.fs.cli.commands;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-import com.material.fs.filesystem.Directory;
+import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.Filesystem;
 
 
