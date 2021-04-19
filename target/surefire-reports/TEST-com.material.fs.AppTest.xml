@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.material.fs.AppTest" time="0.014" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.material.fs.AppTest" time="0.018" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/lcarmody/material-interview/material-fs/target/test-classes:/Users/lcarmody/material-interview/material-fs/target/classes:/Users/lcarmody/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/lcarmody/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/lcarmody/.m2/repository/info/picocli/picocli/3.9.6/picocli-3.9.6.jar:"/>
+    <property name="java.class.path" value="/Users/lcarmody/material-interview/material-fs/target/test-classes:/Users/lcarmody/material-interview/material-fs/target/classes:/Users/lcarmody/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/lcarmody/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/lcarmody/.m2/repository/jline/jline/2.14.2/jline-2.14.2.jar:/Users/lcarmody/.m2/repository/com/google/collections/google-collections/1.0-rc2/google-collections-1.0-rc2.jar:/Users/lcarmody/.m2/repository/com/beust/jcommander/1.81/jcommander-1.81.jar:"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -17,8 +17,8 @@
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/lcarmody/material-interview/material-fs/target/surefire/surefirebooter2471063666865826699.jar /Users/lcarmody/material-interview/material-fs/target/surefire 2021-04-16T16-44-49_826-jvmRun1 surefire7768640993322748047tmp surefire_08687944584558468792tmp"/>
-    <property name="surefire.test.class.path" value="/Users/lcarmody/material-interview/material-fs/target/test-classes:/Users/lcarmody/material-interview/material-fs/target/classes:/Users/lcarmody/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/lcarmody/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/lcarmody/.m2/repository/info/picocli/picocli/3.9.6/picocli-3.9.6.jar:"/>
+    <property name="sun.java.command" value="/Users/lcarmody/material-interview/material-fs/target/surefire/surefirebooter4450934056768220057.jar /Users/lcarmody/material-interview/material-fs/target/surefire 2021-04-18T14-41-04_336-jvmRun1 surefire8398309440872464317tmp surefire_07602413889019744989tmp"/>
+    <property name="surefire.test.class.path" value="/Users/lcarmody/material-interview/material-fs/target/test-classes:/Users/lcarmody/material-interview/material-fs/target/classes:/Users/lcarmody/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/lcarmody/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/lcarmody/.m2/repository/jline/jline/2.14.2/jline-2.14.2.jar:/Users/lcarmody/.m2/repository/com/google/collections/google-collections/1.0-rc2/google-collections-1.0-rc2.jar:/Users/lcarmody/.m2/repository/com/beust/jcommander/1.81/jcommander-1.81.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/lcarmody"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/lcarmody/material-interview/material-fs/target/surefire/surefirebooter2471063666865826699.jar"/>
+    <property name="surefire.real.class.path" value="/Users/lcarmody/material-interview/material-fs/target/surefire/surefirebooter4450934056768220057.jar"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_121-b13"/>

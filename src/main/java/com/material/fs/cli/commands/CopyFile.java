@@ -30,7 +30,7 @@ public class CopyFile extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "copy";
   }
 
   private class CopyFileCommand {

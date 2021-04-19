@@ -17,6 +17,6 @@ public class ChangeDirectory extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "cd";
   }
 }

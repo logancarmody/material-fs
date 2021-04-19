@@ -26,7 +26,7 @@ public class MoveFile extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "move";
   }
 
   private class MoveFileCommand {

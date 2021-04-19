@@ -35,7 +35,7 @@ public class PathTSM implements TraversalStateManager<Optional<File>> {
     }
     Directory directory = (Directory) currentFile;
     String pathSegment = pathIterator.next();
-    return directory.findChild(pathSegment)
+    return directory.getChildFile(pathSegment)
         .orElseGet(() -> handleNotFoundPathSegment(directory, pathSegment));
   }
 

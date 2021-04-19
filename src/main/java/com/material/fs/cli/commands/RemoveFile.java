@@ -22,7 +22,7 @@ public class RemoveFile extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "rm";
   }
 
   private class RemoveFileCommand {

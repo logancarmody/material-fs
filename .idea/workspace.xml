@@ -2,49 +2,85 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8813a442-e3b5-4417-b7ca-1764d6a17971" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSMRecursive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/AllMatchingFilesTSM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/FirstMatchingFileTSM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/search/SearchTSM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CurrentWorkingDirectory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/SearchFiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ShowStructure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/CopyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/CreateTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/MoveTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_2_14_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/Manager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/CLI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/CLI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/StateManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/StateManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ChangeDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ChangeDirectory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CommandResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CommandResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CopyFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CopyFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CreateFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/CreateFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/EditFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/EditFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ListFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/ListFiles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MakeDirectory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MakeDirectory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/MoveFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/RemoveFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/cli/commands/RemoveFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/EditorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/EditorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/TextEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/editor/TextEditor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/BadPathException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/BadPathException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/FileExistsException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/FileExistsException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/IllegalOperationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/IllegalOperationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/InvalidFileNameException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/InvalidFileNameException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/exceptions/InvalidFileTypeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/exceptions/InvalidFileTypeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/ContentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/ContentFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/File.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Filesystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Filesystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Root.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Root.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Traversable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverserRecursive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileCreationPathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileCreationPathTraverserRecursive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/ContentFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/ContentFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Root.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Root.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileSystemTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/FileSystemTraverser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/PathTraverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/PathTSM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/Traverser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/TraversalStateManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSMRecursive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/FileCreationPathTSMRecursive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/PathTSM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/PathTSM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/util/FileNameUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/material/fs/filesystem/FileSystemTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/material-fs.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/Manager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/CLI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/CLI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/StateManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/StateManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ChangeDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ChangeDirectory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CommandResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CommandResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CopyFile$CopyFileCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CopyFile$CopyFileCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CopyFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CreateFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/CreateFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/EditFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/EditFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ListFiles$ListFilesCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ListFiles$ListFilesCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ListFiles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/ListFiles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/MakeDirectory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/MakeDirectory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/MoveFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/MoveFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/RemoveFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/cli/commands/RemoveFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/editor/EditorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/editor/EditorView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/editor/TextEditor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/editor/TextEditor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/exceptions/BadPathException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/exceptions/FileExistsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/exceptions/IllegalOperationException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/exceptions/InvalidFileNameException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/exceptions/InvalidFileTypeException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/ContentFile.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/Directory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/File.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/Filesystem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/Filesystem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/Root.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/Traversable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/DirectoryCreationPathTraverserRecursive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/FileCreationPathTraverser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/FileCreationPathTraverserRecursive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/FileSystemTraverser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/FileSystemTraverser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/PathTraverser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/traversal/Traverser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/util/Constants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/util/Constants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/util/FilenameUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/material/fs/filesystem/util/FilenameUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/material-fs-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/material-fs-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.material.fs.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.material.fs.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.material.fs.filesystem.FileSystemTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.material.fs.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.material.fs.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.material.fs.filesystem.FileSystemTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/material/fs/filesystem/FileSystemTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,31 +135,18 @@
       <recent name="com.material.fs.filesystem" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.material.fs.exceptions" />
       <recent name="com.material.fs.cli.commands" />
+      <recent name="com.material.fs.exceptions" />
       <recent name="com.material.fs.filesystem.traversal" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CLI (1)">
-    <configuration name="CLI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.CLI">
+    <configuration name="CLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.material.fs.cli.CLI" />
       <module name="material-fs" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.material.fs.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CLI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.material.fs.cli.commands.CLI" />
-      <module name="material-fs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.material.fs.cli.commands.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,46 +167,65 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EditorView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.material.fs.editor.EditorView" />
+    <configuration name="FileSystemBaseTest.testDelete" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="material-fs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.material.fs.editor.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileSystemTest.testCopyFileAbsolute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="material-fs" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.material.fs.filesystem.traversal.state.path.*" />
+          <option name="PATTERN" value="com.material.fs.filesystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
-      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemTest" />
-      <option name="METHOD_NAME" value="testCopyFileAbsolute" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemBaseTest" />
+      <option name="METHOD_NAME" value="testDelete" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSystemTest.testMoveDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileSystemBaseTest.testDeleteDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="material-fs" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.material.fs.filesystem.traversal.state.path.*" />
+          <option name="PATTERN" value="com.material.fs.filesystem.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
-      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemTest" />
-      <option name="METHOD_NAME" value="testMoveDirectory" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemBaseTest" />
+      <option name="METHOD_NAME" value="testDeleteDirectory" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemBaseTest.testDeleteDirectoryError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.filesystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemBaseTest" />
+      <option name="METHOD_NAME" value="testDeleteDirectoryError" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemBaseTest.testPrint" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="material-fs" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.material.fs.filesystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.material.fs.filesystem" />
+      <option name="MAIN_CLASS_NAME" value="com.material.fs.filesystem.FileSystemBaseTest" />
+      <option name="METHOD_NAME" value="testPrint" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -191,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CLI (1)" />
         <item itemvalue="Application.CLI" />
-        <item itemvalue="Application.EditorView" />
-        <item itemvalue="JUnit.FileSystemTest.testCopyFileAbsolute" />
-        <item itemvalue="JUnit.FileSystemTest.testMoveDirectory" />
+        <item itemvalue="JUnit.FileSystemBaseTest.testDeleteDirectoryError" />
+        <item itemvalue="JUnit.FileSystemBaseTest.testDeleteDirectory" />
+        <item itemvalue="JUnit.FileSystemBaseTest.testDelete" />
+        <item itemvalue="JUnit.FileSystemBaseTest.testPrint" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +252,7 @@
       <option name="presentableId" value="Default" />
       <updated>1618584731140</updated>
       <workItem from="1618584736274" duration="43906000" />
-      <workItem from="1618758335035" duration="16820000" />
+      <workItem from="1618758335035" duration="28567000" />
     </task>
     <servers>
       <JIRA url="https://jira01.corp.linkedin.com:8443">
@@ -222,10 +264,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser" timestamp="1618776147419">
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser" timestamp="1618779858164">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser/0.25.2560.1415@0.25.2560.1415" timestamp="1618776147419" />
+    <state x="1093" y="446" key="#com.intellij.ide.util.MemberChooser/0.25.2560.1415@0.25.2560.1415" timestamp="1618779858164" />
     <state x="855" y="662" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1618772961561">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -234,46 +276,46 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="1054" y="617" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.25.2560.1415@0.25.2560.1415" timestamp="1618772963176" />
-    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618774225988">
+    <state x="755" y="25" width="755" height="1415" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1618797082147">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="755" y="25" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618774225988" />
-    <state x="1063" y="573" key="#xdebugger.evaluate" timestamp="1618765831592">
+    <state x="755" y="25" width="755" height="1415" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618797082147" />
+    <state x="921" y="765" key="#xdebugger.evaluate" timestamp="1618797490007">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="1063" y="573" key="#xdebugger.evaluate/0.25.2560.1415@0.25.2560.1415" timestamp="1618765831592" />
-    <state width="2518" height="489" key="GridCell.Tab.0.bottom" timestamp="1618771251440">
+    <state x="921" y="765" key="#xdebugger.evaluate/0.25.2560.1415@0.25.2560.1415" timestamp="1618797490007" />
+    <state width="2518" height="397" key="GridCell.Tab.0.bottom" timestamp="1618797789520">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
-    <state width="2518" height="489" key="GridCell.Tab.0.center" timestamp="1618771251440">
+    <state width="2518" height="397" key="GridCell.Tab.0.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618797789520" />
+    <state width="2518" height="397" key="GridCell.Tab.0.center" timestamp="1618797789519">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
-    <state width="2518" height="489" key="GridCell.Tab.0.left" timestamp="1618771251439">
+    <state width="2518" height="397" key="GridCell.Tab.0.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618797789519" />
+    <state width="2518" height="397" key="GridCell.Tab.0.left" timestamp="1618797789518">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251439" />
-    <state width="2518" height="489" key="GridCell.Tab.0.right" timestamp="1618771251440">
+    <state width="2518" height="397" key="GridCell.Tab.0.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618797789518" />
+    <state width="2518" height="397" key="GridCell.Tab.0.right" timestamp="1618797789519">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251440" />
-    <state width="2518" height="489" key="GridCell.Tab.1.bottom" timestamp="1618771251389">
+    <state width="2518" height="397" key="GridCell.Tab.0.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618797789519" />
+    <state width="2518" height="489" key="GridCell.Tab.1.bottom" timestamp="1618797505915">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.1.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251389" />
-    <state width="2518" height="489" key="GridCell.Tab.1.center" timestamp="1618771251388">
+    <state width="2518" height="489" key="GridCell.Tab.1.bottom/0.25.2560.1415@0.25.2560.1415" timestamp="1618797505915" />
+    <state width="2518" height="489" key="GridCell.Tab.1.center" timestamp="1618797505914">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.1.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251388" />
-    <state width="2518" height="489" key="GridCell.Tab.1.left" timestamp="1618771251388">
+    <state width="2518" height="489" key="GridCell.Tab.1.center/0.25.2560.1415@0.25.2560.1415" timestamp="1618797505914" />
+    <state width="2518" height="489" key="GridCell.Tab.1.left" timestamp="1618797505913">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.1.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251388" />
-    <state width="2518" height="489" key="GridCell.Tab.1.right" timestamp="1618771251389">
+    <state width="2518" height="489" key="GridCell.Tab.1.left/0.25.2560.1415@0.25.2560.1415" timestamp="1618797505913" />
+    <state width="2518" height="489" key="GridCell.Tab.1.right" timestamp="1618797505915">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state width="2518" height="489" key="GridCell.Tab.1.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618771251389" />
+    <state width="2518" height="489" key="GridCell.Tab.1.right/0.25.2560.1415@0.25.2560.1415" timestamp="1618797505915" />
     <state x="818" y="391" key="Maven.ArtifactSearchDialog" timestamp="1618585282912">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
@@ -290,18 +332,23 @@
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
     <state x="987" y="343" key="refactoring.ChangeSignatureDialog/0.25.2560.1415@0.25.2560.1415" timestamp="1618687203574" />
-    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup" timestamp="1618611816196">
+    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup" timestamp="1618790125132">
       <screen x="0" y="25" width="2560" height="1415" />
     </state>
-    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1618611816196" />
+    <state x="945" y="349" width="670" height="676" key="search.everywhere.popup/0.25.2560.1415@0.25.2560.1415" timestamp="1618790125132" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/models/Directory.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="16" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/material/fs/filesystem/Filesystem.java</url>
+          <line>203</line>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

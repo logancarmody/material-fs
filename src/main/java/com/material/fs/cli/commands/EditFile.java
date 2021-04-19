@@ -22,7 +22,7 @@ public class EditFile extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "edit";
   }
 
   private class EditFileCommand {

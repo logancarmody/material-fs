@@ -7,7 +7,7 @@ import com.material.fs.filesystem.traversal.state.path.PathTSM;
 import com.material.fs.filesystem.traversal.state.TraversalStateManager;
 import com.material.fs.filesystem.traversal.state.search.AllMatchingFilesTSM;
 import com.material.fs.filesystem.traversal.state.search.FirstMatchingFileTSM;
-import com.material.fs.filesystem.util.FilenameUtil;
+import com.material.fs.filesystem.util.FileNameUtil;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
@@ -33,10 +33,10 @@ public class FileSystemTraverser {
    * @return the resulting file
    */
   public <T extends PathTSM> File traversePath(Directory cwd, String filePath, Function<String, T> pathTraverserConstructor) {
-    if (!FilenameUtil.isValidPath(filePath)) {
+    if (!FileNameUtil.isValidPath(filePath)) {
       throw new BadPathException(filePath);
     }
-    Directory startDirectory = FilenameUtil.isAbsolutePath(filePath) ? _eof : cwd;
+    Directory startDirectory = FileNameUtil.isAbsolutePath(filePath) ? _eof : cwd;
     return traverse(startDirectory, pathTraverserConstructor.apply(filePath))
         .orElseThrow(() -> new BadPathException(filePath));
   }

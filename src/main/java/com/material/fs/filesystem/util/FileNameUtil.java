@@ -3,7 +3,7 @@ package com.material.fs.filesystem.util;
 import java.util.regex.Pattern;
 
 
-public class FilenameUtil {
+public class FileNameUtil {
   private static final String FILE_PATH_REGEX = "\\.\\.|\\.|~|((~/)?([-_A-Za-z0-9]+/)*([-_A-Za-z0-9]+\\.[a-z]+)?)";
   private static final String DIRECTORY_PATH_REGEX = "(~/)?([-_A-Za-z0-9]+/)*([-_A-Za-z0-9]+)?";
   private static final Pattern FILE_PATH_PATTERN = Pattern.compile(FILE_PATH_REGEX);

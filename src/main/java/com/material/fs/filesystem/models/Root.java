@@ -3,20 +3,30 @@ package com.material.fs.filesystem.models;
 import java.util.Optional;
 
 
+/**
+ * This is the root node in the file system
+ */
 public class Root extends Directory {
-  private static final Directory EOF = new Directory();
+  private final Directory EOF;
 
   public Root() {
-    super(EOF, "~");
+    super();
+    EOF = new Directory();
+    move(EOF);
+    setName("~");
     EOF.addFile(this);
   }
 
-  public Optional<File> findChild(String fileName) {
-    return super.findChild(fileName)
+  @Override
+  public Optional<File> getChildFile(String fileName) {
+    return super.getChildFile(fileName)
         .filter(file -> !EOF.equals(file));
   }
 
-  public static Directory getEof() {
+  /**
+   * This method returns the EOF Directory, which is the root node's parent.
+   */
+  public Directory getEof() {
     return EOF;
   }
 }

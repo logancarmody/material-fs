@@ -3,6 +3,9 @@ package com.material.fs.filesystem.models;
 import java.util.Objects;
 
 
+/**
+ * A file which contains content
+ */
 public class ContentFile extends File {
   private String _content;
 
@@ -20,10 +23,17 @@ public class ContentFile extends File {
     return new ContentFile(_parent, _name, _content);
   }
 
+  /**
+   * Return the content in the file
+   */
   public String getContent() {
     return _content;
   }
 
+  /**
+   * Set the content of the file
+   * @param newContent the content
+   */
   public void setContent(String newContent) {
     _content = newContent;
   }

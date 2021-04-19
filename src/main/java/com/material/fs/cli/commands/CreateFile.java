@@ -22,7 +22,7 @@ public class CreateFile extends Command {
 
   @Override
   public String getName() {
-    return null;
+    return "create";
   }
 
   private class CreateFileCommand {

@@ -1,5 +1,6 @@
 package com.material.fs.filesystem.models;
 
+import com.material.fs.filesystem.exceptions.BadPathException;
 import com.material.fs.filesystem.exceptions.FileExistsException;
 import com.material.fs.filesystem.util.Constants;
 import java.util.Collection;
@@ -12,6 +13,9 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
+/**
+ * A file which contains other files
+ */
 public class Directory extends File {
   protected Map<String, File> _contents;
 
@@ -37,13 +41,21 @@ public class Directory extends File {
     return new Directory(_parent, _name, newContents);
   }
 
+  /**
+   * @return the contents of this directory
+   */
   public Collection<File> getContents() {
     return _contents.values();
   }
 
+  /**
+   * Create an empty content file inside this directory
+   *
+   * @param filename the name for the file
+   * @return the created file
+   */
   public ContentFile createEmptyContentFile(String filename) {
-    // TODO should validate file name here?
-    if (findChild(filename).isPresent()) {
+    if (getChildFile(filename).isPresent()) {
       throw new RuntimeException();
     }
 
@@ -52,13 +64,23 @@ public class Directory extends File {
     return file;
   }
 
+  /**
+   * Checks if the given file is in this directory.
+   * It does not check recursively
+   */
   public boolean contains(File file) {
     return file.equals(_contents.get(file.getName()));
   }
 
+  /**
+   * Create a directory inside this directory
+   *
+   * @param filename the name for the directory
+   * @return the new Directory
+   */
   public Directory createDirectory(String filename) {
-    if (findChild(filename).isPresent()) {
-      throw new RuntimeException();
+    if (getChildFile(filename).isPresent()) {
+      throw new FileExistsException(getChildFile(filename).get());
     }
 
     Directory directory = new Directory(this, filename);
@@ -66,7 +88,14 @@ public class Directory extends File {
     return directory;
   }
 
-  public Optional<File> findChild(String fileName) {
+  /**
+   * Returns either a child file, it's parent or itself depending on the filename.
+   * This method can be used for traversing through this directory.
+   *
+   * @param fileName filename. This can be "." or ".."
+   * @return the file.
+   */
+  public Optional<File> getChildFile(String fileName) {
     if (fileName.equals(Constants.CURRENT_DIRECTORY_SHORTCUT)) {
       return Optional.of(this);
     }
@@ -78,15 +107,36 @@ public class Directory extends File {
     return Optional.ofNullable(_contents.get(fileName));
   }
 
-  public Optional<Directory> findDirectory(String fileName) {
-    return findChild(fileName)
-        .filter(file -> file instanceof Directory)
-        .map(file -> (Directory) file);
+
+  // Just for testing
+  public Directory getChildDirectory(String fileName) {
+    if (fileName.equals(Constants.CURRENT_DIRECTORY_SHORTCUT)) {
+      return this;
+    }
+
+    if (fileName.equals(Constants.PARENT_DIRECTORY_SHORTCUT)) {
+      return getParent();
+    }
+
+    return _contents.get(fileName).getDirectory();
   }
 
+  // For testing
+  public Map<String, File> getContentMap() {
+    return _contents;
+  }
+
+  /**
+   * Delete the given file from this directory
+   *
+   * @param file the file to delete
+   */
   public void deleteFile(File file) {
-    _contents.remove(file.getName());
-    file._parent = null;
+    File removedFile = _contents.remove(file.getName());
+    if (removedFile == null) {
+      throw new BadPathException(file.getName());
+    }
+    removedFile._parent = null;
   }
 
   @Override
@@ -102,6 +152,11 @@ public class Directory extends File {
         && Objects.equals(this._contents, other._contents);
   }
 
+  /**
+   * Add a file to this directory
+   *
+   * @param file the file to add
+   */
   public void addFile(File file) {
     if (!_contents.containsKey(file.getName())) {
       _contents.put(file.getName(), file);

@@ -1,5 +1,6 @@
 package com.material.fs.filesystem.traversal.state.path;
 
+import com.material.fs.filesystem.exceptions.BadPathException;
 import com.material.fs.filesystem.exceptions.FileExistsException;
 import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.models.File;
@@ -30,7 +31,7 @@ public class FileCreationPathTSM extends PathTSM {
    * This method handles if we encounter a directory segment of the path that doesn't exist
    */
   protected File handleNotFoundDirectorySegment(Directory currentDirectory, String pathSegment) {
-    throw new RuntimeException();
+    throw new BadPathException(pathSegment);
   }
 
   /**
