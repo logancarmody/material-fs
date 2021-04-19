@@ -2,17 +2,17 @@ package com.material.fs.cli.commands;
 
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.models.File;
-import java.util.Collection;
-import java.util.stream.Collectors;
 
 
+/**
+ * This command prints the filesystem structure from the current directory or from a specified directory
+ */
 public class ShowStructure extends Command {
 
   @Override
-  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, FileSystem filesystem) {
     ShowStructureCommand showStructureCommand = new ShowStructureCommand();
     JCommander jCommander = JCommander.newBuilder()
         .addCommand(getName(), showStructureCommand)
@@ -37,7 +37,7 @@ public class ShowStructure extends Command {
   }
 
   private static class ShowStructureCommand {
-    @Parameter(description = "The path to list files")
+    @Parameter(description = "The path to list files. Default is cwd")
     private String pathToFile;
   }
 }

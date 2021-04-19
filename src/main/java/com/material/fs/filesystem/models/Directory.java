@@ -55,8 +55,9 @@ public class Directory extends File {
    * @return the created file
    */
   public ContentFile createEmptyContentFile(String filename) {
-    if (getChildFile(filename).isPresent()) {
-      throw new RuntimeException();
+    Optional<File> maybeChildFile = getChildFile(filename);
+    if (maybeChildFile.isPresent()) {
+      throw new FileExistsException(maybeChildFile.get());
     }
 
     ContentFile file = new ContentFile(this, filename);

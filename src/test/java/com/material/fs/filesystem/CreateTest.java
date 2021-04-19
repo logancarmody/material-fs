@@ -11,11 +11,14 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
+/**
+ * Unit tests for file and directory create functionality
+ */
 public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     ContentFile contentFile = filesystem.createFile(parentDir, "newfile.txt", false, false);
@@ -24,7 +27,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateFileBadName() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createFile(parentDir, "newfile", false, false),
@@ -33,7 +36,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateFileAlongPath() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     ContentFile contentFile = filesystem.createFile(parentDir, "newDir/newfile.txt", true, false);
@@ -42,7 +45,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testExceptionCreateFileAlongPath() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createFile(parentDir, "newDir/newfile.txt", false, false),
@@ -51,7 +54,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testExceptionCreateExistingFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createFile(parentDir, "paper.txt", false, false),
@@ -60,7 +63,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateDirectory() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     Directory newDirectory = filesystem.createDirectory(parentDir, "newDir", false);
@@ -69,7 +72,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateDirectoryAlongPath() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     Directory newDirectory = filesystem.createDirectory(parentDir, "newDir/anotherNewDir", true);
@@ -78,7 +81,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateDirectoryAlongPathException() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createDirectory(parentDir, "newDir/anotherNewDir", false),
@@ -87,7 +90,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateDirectoryWithFileNameException() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createDirectory(parentDir, "newDir.txt", false),
@@ -96,7 +99,7 @@ public class CreateTest extends FileSystemBaseTest {
 
   @Test
   public void testCreateDirectoryWithExistingDir() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
     Directory parentDir = filesystem._root.getChildDirectory("documents");
 
     assertExceptionThrown(() -> filesystem.createDirectory(parentDir, "secrets", false),

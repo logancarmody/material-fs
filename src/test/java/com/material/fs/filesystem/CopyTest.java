@@ -9,10 +9,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
+/**
+ * Tests for copying files in the FileSystem
+ */
 public class CopyTest extends FileSystemBaseTest {
   @Test
   public void testCopyFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.copyFile(filesystem._root, "~/documents/paper.txt", "~", Optional.empty(), false);
 
@@ -22,7 +25,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyFileName() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.copyFile(filesystem._root, "~/documents/paper.txt", "~", Optional.of("cool.t"), false);
 
@@ -32,7 +35,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyDirectory() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.copyFile(filesystem._root, "~/documents/secrets", "~", Optional.empty(), true);
 
@@ -42,7 +45,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyDirectoryName() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.copyFile(filesystem._root, "~/documents/secrets", "~", Optional.of("newSecrets"), true);
 
@@ -52,7 +55,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyDirectoryNoRecursive() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.copyFile(filesystem._root, "~/documents/secrets", "~", Optional.empty(), false);
@@ -63,7 +66,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyCurrentDirectory() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.copyFile(filesystem._root.getChildDirectory("documents").getChildDirectory("secrets"),
@@ -75,7 +78,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyNotRealFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.copyFile(filesystem._root,
@@ -87,7 +90,7 @@ public class CopyTest extends FileSystemBaseTest {
 
   @Test
   public void testCopyBadFileNameFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.copyFile(filesystem._root,

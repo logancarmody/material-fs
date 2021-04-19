@@ -3,17 +3,21 @@ package com.material.fs.cli.commands;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 import java.util.Optional;
 
 
+/**
+ * This command allows you to move files from one location to another.
+ * Syntax: "move --file <file to copy> --destination <destination> --name <[optional] new name> -r"
+ */
 public class MoveFile extends Command {
   @Override
-  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, FileSystem filesystem) {
     MoveFileCommand moveFileCommand = new MoveFileCommand();
 
     JCommander jCommander = JCommander.newBuilder()
-        .addCommand("move", moveFileCommand)
+        .addCommand(getName(), moveFileCommand)
         .build();
 
     jCommander.parse(params);

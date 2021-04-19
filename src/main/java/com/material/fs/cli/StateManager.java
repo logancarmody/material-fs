@@ -14,7 +14,7 @@ import com.material.fs.cli.commands.RemoveFile;
 import com.material.fs.cli.commands.SearchFiles;
 import com.material.fs.cli.commands.ShowStructure;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
@@ -43,12 +43,12 @@ public class StateManager {
       new ShowStructure())
       .collect(Collectors.toMap(Command::getName, Function.identity()));
 
-  private final Filesystem _filesystem;
+  private final FileSystem _fileSystem;
   private Directory _cwd;
 
   public StateManager() {
-    _filesystem = new Filesystem();
-    _cwd = _filesystem.getRootDirectory();
+    _fileSystem = new FileSystem();
+    _cwd = _fileSystem.getRootDirectory();
   }
 
   /**
@@ -65,7 +65,7 @@ public class StateManager {
 
     return Optional.ofNullable(_commandMap.get(baseCommand))
         .map(command -> {
-          CommandResponse cr = command.runCommand(commandAry, _cwd, _filesystem);
+          CommandResponse cr = command.runCommand(commandAry, _cwd, _fileSystem);
           _cwd = cr.getCwg();
           return cr.toString();
         })

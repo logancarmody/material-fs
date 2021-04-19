@@ -4,6 +4,7 @@
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/ListFiles.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/traversal/state/path/PathTSM.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.java
+/Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/FileSystem.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/traversal/FileSystemTraverser.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/exceptions/InvalidFileNameException.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/CLI.java
@@ -11,6 +12,7 @@
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/CreateFile.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/models/Root.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/SearchFiles.java
+/Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/ShowStructure.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/CurrentWorkingDirectory.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/CopyFile.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/ChangeDirectory.java
@@ -33,6 +35,5 @@
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSM.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/MakeDirectory.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/models/Directory.java
-/Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/Filesystem.java
-/Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/util/FilenameUtil.java
+/Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/filesystem/util/FileNameUtil.java
 /Users/lcarmody/material-interview/material-fs/src/main/java/com/material/fs/cli/commands/RemoveFile.java

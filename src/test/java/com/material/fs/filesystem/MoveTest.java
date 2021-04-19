@@ -9,10 +9,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
+/**
+ * Tests for moving files in the FileSystem
+ */
 public class MoveTest extends FileSystemBaseTest {
   @Test
   public void testMoveFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.moveFile(filesystem._root, "~/documents/paper.txt", "~", Optional.empty(), false);
 
@@ -22,7 +25,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveFileName() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.moveFile(filesystem._root, "~/documents/paper.txt", "~", Optional.of("cool.t"), false);
 
@@ -32,7 +35,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveDirectory() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.moveFile(filesystem._root, "~/documents/secrets", "~", Optional.empty(), true);
 
@@ -42,7 +45,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveDirectoryName() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     filesystem.moveFile(filesystem._root, "~/documents/secrets", "~", Optional.of("newSecrets"), true);
 
@@ -52,7 +55,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveDirectoryNoRecursive() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.moveFile(filesystem._root, "~/documents/secrets", "~", Optional.empty(), false);
@@ -63,7 +66,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveCurrentDirectory() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.moveFile(filesystem._root.getChildDirectory("documents").getChildDirectory("secrets"),
@@ -75,7 +78,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveNotRealFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.moveFile(filesystem._root,
@@ -87,7 +90,7 @@ public class MoveTest extends FileSystemBaseTest {
 
   @Test
   public void testMoveBadFileNameFile() {
-    Filesystem filesystem = buildTestFileSystem();
+    FileSystem filesystem = buildTestFileSystem();
 
     assertExceptionThrown(() -> {
           filesystem.moveFile(filesystem._root,

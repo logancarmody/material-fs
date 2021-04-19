@@ -3,7 +3,7 @@ package com.material.fs.cli.commands;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 import java.util.Optional;
 
 
@@ -13,11 +13,11 @@ import java.util.Optional;
  */
 public class CopyFile extends Command {
   @Override
-  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, FileSystem filesystem) {
     CopyFileCommand copyFileCommand = new CopyFileCommand();
 
     JCommander jCommander = JCommander.newBuilder()
-        .addCommand("copy", copyFileCommand)
+        .addCommand(getName(), copyFileCommand)
         .build();
 
     jCommander.parse(params);

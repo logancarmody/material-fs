@@ -1,6 +1,7 @@
 package com.material.fs.filesystem;
 
 import com.material.fs.editor.TextEditor;
+import com.material.fs.filesystem.exceptions.BadPathException;
 import com.material.fs.filesystem.exceptions.IllegalOperationException;
 import com.material.fs.filesystem.exceptions.InvalidFileNameException;
 import com.material.fs.filesystem.models.ContentFile;
@@ -23,17 +24,23 @@ import java.util.stream.Collectors;
 /**
  * The base filesystem class.
  * This class is stateless and just exposes different APIs for interacting with the filesystem.
+ *
+ * Potential Improvements:
+ *   - Make threadsafe
+ *   - More consistent error handling
+ *   - Break up into interface / impl to allow for different backing implementations
+ *   - Refactor so less is in a single class
  */
-public class Filesystem {
-  final Directory EOF;
+public class FileSystem {
+  final Directory _EOF;
   final Root _root;
   final FileSystemTraverser _traverser;
   final TextEditor _textEditor;
 
-  public Filesystem() {
+  public FileSystem() {
     _root = new Root();
-    EOF = _root.getEof();
-    _traverser = new FileSystemTraverser(EOF);
+    _EOF = _root.getEof();
+    _traverser = new FileSystemTraverser(_EOF);
     _textEditor = new TextEditor();
   }
 
@@ -43,27 +50,7 @@ public class Filesystem {
    * @param cwd current working directory
    */
   public String currentFullPath(Directory cwd) {
-    return getPath(EOF, cwd);
-  }
-
-  private String getPath(Directory stoppingPoint, File startingPoint) {
-    if (startingPoint == _root) {
-      return _root.getName();
-    }
-
-    LinkedList<String> path = new LinkedList<>();
-    path.add(startingPoint.getName());
-    File parent = startingPoint.getParent();
-    while (parent != stoppingPoint) {
-      if (parent == EOF) {
-        throw new RuntimeException("Stopping point not in path");
-      }
-      path.addFirst(parent.getName());
-      parent = parent.getParent();
-    }
-
-    // TODO potentially memoize FQN
-    return String.join("/", path);
+    return getPath(_EOF, cwd);
   }
 
   /**
@@ -189,6 +176,63 @@ public class Filesystem {
     }
   }
 
+  /**
+   * Print the current directory structure
+   *
+   * @param cwd current working directory
+   * @param path path from where to print
+   * @return the printed structure
+   */
+  public String print(Directory cwd, String path) {
+    return getFileAtPath(cwd, path).print();
+  }
+
+  /**
+   * Print the current directory structure
+   *
+   * @param cwd current working directory
+   * @return the printed structure
+   */
+  public String print(Directory cwd) {
+    return cwd.print();
+  }
+
+  /**
+   * Delete an existing file
+   *
+   * @param cwd current working directory
+   * @param path the path to the file to delete
+   * @param deleteDirectory if true, this will delete a directory
+   */
+  public void deleteFile(Directory cwd, String path, boolean deleteDirectory) {
+    File file = getFileAtPath(cwd, path);
+    validateFile(cwd, file);
+    if (file instanceof Directory && !deleteDirectory) {
+      throw new IllegalOperationException("You are attempting to delete a directory. If you would like to delete a directory, add the -r flag.");
+    }
+    file.getParent().deleteFile(file);
+  }
+
+  private String getPath(Directory stoppingPoint, File startingPoint) {
+    if (startingPoint == _root) {
+      return _root.getName();
+    }
+
+    LinkedList<String> path = new LinkedList<>();
+    path.add(startingPoint.getName());
+    File parent = startingPoint.getParent();
+    while (parent != stoppingPoint) {
+      if (parent == _EOF) {
+        throw new BadPathException(startingPoint.getName());
+      }
+      path.addFirst(parent.getName());
+      parent = parent.getParent();
+    }
+
+    // TODO potentially memoize FQN
+    return String.join("/", path);
+  }
+
   private void moveFile(Directory cwd, String existingFilePath, String finalDirectoryPath, Optional<String> maybeNewName, boolean copy, boolean moveDirectories) {
     File existingFile = getFileAtPath(cwd, existingFilePath);
 
@@ -233,47 +277,8 @@ public class Filesystem {
     }
   }
 
-  /**
-   * Print the current directory structure
-   *
-   * @param cwd current working directory
-   * @param path path from where to print
-   * @return the printed structure
-   */
-  public String print(Directory cwd, String path) {
-    return getFileAtPath(cwd, path).print();
-  }
-
-  /**
-   * Print the current directory structure
-   *
-   * @param cwd current working directory
-   * @return the printed structure
-   */
-  public String print(Directory cwd) {
-    return cwd.print();
-  }
-
-  /**
-   * Delete an existing file
-   *
-   * @param cwd current working directory
-   * @param path the path to the file to delete
-   * @param deleteDirectory if true, this will delete a directory
-   */
-  public void deleteFile(Directory cwd, String path, boolean deleteDirectory) {
-    File file = getFileAtPath(cwd, path);
-    validateFile(cwd, file);
-    if (file instanceof Directory && !deleteDirectory) {
-      throw new IllegalOperationException("You are attempting to delete a directory. If you would like to delete a directory, add the -r flag.");
-    }
-    synchronized (_root) {
-      file.getParent().deleteFile(file);
-    }
-  }
-
   private void validateFile(Directory cwd, File file) {
-    if (file == _root || file == EOF) {
+    if (file == _root || file == _EOF) {
       throw new IllegalOperationException("You can't modify this file.");
     }
     if (isEqualToOrContains(file, cwd)) {
@@ -281,6 +286,9 @@ public class Filesystem {
     }
   }
 
+  /**
+   * This method returns true if @param child is contained at some point in the file tree by @param parent
+   */
   private boolean isEqualToOrContains(File parent, File child) {
     // TODO explore memoization techniques for optimization
     if (parent == child) {
@@ -288,7 +296,7 @@ public class Filesystem {
     }
 
     File cur = child;
-    while (cur != _root) {
+    while (cur != null && cur != _root) {
       cur = cur.getParent();
       if (cur == parent) {
         return true;

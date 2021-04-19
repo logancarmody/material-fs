@@ -3,15 +3,19 @@ package com.material.fs.cli.commands;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 
 
+/**
+ * This command deletes the specified file.
+ * Use -r flag to delete a directory
+ */
 public class RemoveFile extends Command {
   @Override
-  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, FileSystem filesystem) {
     RemoveFileCommand deleteFileCommand = new RemoveFileCommand();
     JCommander jCommander = JCommander.newBuilder()
-        .addCommand("rm", deleteFileCommand)
+        .addCommand(getName(), deleteFileCommand)
         .build();
 
     jCommander.parse(params);

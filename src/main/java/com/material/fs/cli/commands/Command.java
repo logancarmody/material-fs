@@ -1,7 +1,7 @@
 package com.material.fs.cli.commands;
 
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 
 
 /**
@@ -19,7 +19,7 @@ public abstract class Command {
    * @param cwd the current working directory
    * @param filesystem the filesystem
    */
-  protected abstract CommandResponse run(String[] params, Directory cwd, Filesystem filesystem);
+  protected abstract CommandResponse run(String[] params, Directory cwd, FileSystem filesystem);
 
   /**
    * Parses and runs the command specified by the params.
@@ -29,7 +29,7 @@ public abstract class Command {
    * @param cwd the current working directory
    * @param filesystem the filesystem
    */
-  public final CommandResponse runCommand(String[] params, Directory cwd, Filesystem filesystem) {
+  public final CommandResponse runCommand(String[] params, Directory cwd, FileSystem filesystem) {
     try {
       return run(params, cwd, filesystem);
     } catch (Exception e) {

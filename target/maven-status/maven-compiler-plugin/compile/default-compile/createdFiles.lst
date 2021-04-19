@@ -1,4 +1,3 @@
-com/material/fs/filesystem/Filesystem.class
 com/material/fs/cli/CLI.class
 com/material/fs/editor/TextEditor.class
 com/material/fs/filesystem/models/ContentFile.class
@@ -13,7 +12,9 @@ com/material/fs/filesystem/traversal/state/path/FileCreationPathTSMRecursive.cla
 com/material/fs/cli/commands/CopyFile.class
 com/material/fs/filesystem/models/File.class
 com/material/fs/cli/StateManager.class
+com/material/fs/cli/commands/ShowStructure.class
 com/material/fs/filesystem/traversal/state/TraversalStateManager.class
+com/material/fs/cli/commands/ShowStructure$ShowStructureCommand.class
 com/material/fs/filesystem/util/Constants.class
 com/material/fs/filesystem/traversal/state/path/DirectoryCreationPathTSMRecursive.class
 com/material/fs/cli/commands/ListFiles.class
@@ -21,8 +22,8 @@ com/material/fs/cli/commands/EditFile$EditFileCommand.class
 com/material/fs/filesystem/models/Directory.class
 com/material/fs/filesystem/exceptions/FileExistsException.class
 com/material/fs/cli/commands/Command.class
-com/material/fs/filesystem/util/FilenameUtil.class
 com/material/fs/cli/commands/RemoveFile$RemoveFileCommand.class
+com/material/fs/cli/commands/ChangeDirectory$1.class
 com/material/fs/cli/commands/EditFile.class
 com/material/fs/filesystem/traversal/state/path/PathTSM.class
 com/material/fs/cli/commands/CurrentWorkingDirectory.class
@@ -33,7 +34,9 @@ com/material/fs/cli/commands/ChangeDirectory.class
 com/material/fs/cli/commands/MoveFile$MoveFileCommand.class
 com/material/fs/cli/commands/ListFiles$1.class
 com/material/fs/cli/commands/EditFile$1.class
+com/material/fs/cli/commands/ShowStructure$1.class
 com/material/fs/filesystem/traversal/FileSystemTraverser.class
+com/material/fs/filesystem/util/FileNameUtil.class
 com/material/fs/cli/commands/CommandResponse.class
 com/material/fs/cli/commands/CreateFile$CreateFileCommand.class
 com/material/fs/filesystem/traversal/state/search/AllMatchingFilesTSM.class
@@ -42,6 +45,7 @@ com/material/fs/cli/commands/RemoveFile$1.class
 com/material/fs/cli/commands/SearchFiles.class
 com/material/fs/cli/commands/MoveFile$1.class
 com/material/fs/cli/commands/MakeDirectory$MakeDirectoryCommand.class
+com/material/fs/filesystem/FileSystem.class
 com/material/fs/cli/commands/CopyFile$CopyFileCommand.class
 com/material/fs/filesystem/traversal/state/path/FileCreationPathTSM.class
 com/material/fs/cli/commands/CopyFile$1.class
@@ -51,4 +55,5 @@ com/material/fs/editor/EditorView.class
 com/material/fs/filesystem/models/Root.class
 com/material/fs/filesystem/traversal/state/search/SearchTSM.class
 com/material/fs/cli/commands/MakeDirectory.class
+com/material/fs/cli/commands/ChangeDirectory$ChangeDirectoryCommand.class
 com/material/fs/filesystem/exceptions/IllegalOperationException.class

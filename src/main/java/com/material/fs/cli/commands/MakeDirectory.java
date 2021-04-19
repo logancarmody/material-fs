@@ -3,16 +3,20 @@ package com.material.fs.cli.commands;
 import com.beust.jcommander.JCommander;
 import com.beust.jcommander.Parameter;
 import com.material.fs.filesystem.models.Directory;
-import com.material.fs.filesystem.Filesystem;
+import com.material.fs.filesystem.FileSystem;
 
 
+/**
+ * This directory creates a directory at the given path.
+ * The -r flag allows you to do so recursively
+ */
 public class MakeDirectory extends Command {
 
   @Override
-  public CommandResponse run(String[] params, Directory cwd, Filesystem filesystem) {
+  public CommandResponse run(String[] params, Directory cwd, FileSystem filesystem) {
     MakeDirectoryCommand makeDirectoryCommand = new MakeDirectoryCommand();
     JCommander jCommander = JCommander.newBuilder()
-        .addCommand("mkdir", makeDirectoryCommand)
+        .addCommand(getName(), makeDirectoryCommand)
         .build();
 
     jCommander.parse(params);
@@ -27,7 +31,7 @@ public class MakeDirectory extends Command {
   }
 
   private static class MakeDirectoryCommand {
-    @Parameter(description = "The file to create")
+    @Parameter(description = "The file to create", required = true)
     private String pathToCreate;
 
     @Parameter(names = "-r", description = "Whether to recursively make directories")

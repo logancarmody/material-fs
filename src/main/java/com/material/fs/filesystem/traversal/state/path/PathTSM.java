@@ -30,9 +30,11 @@ public class PathTSM implements TraversalStateManager<Optional<File>> {
 
   @Override
   public File getNextFile(File currentFile) {
+    // We should always be on a directory if we are invoking this method
     if (!(currentFile instanceof Directory)) {
-      throw new RuntimeException();
+      throw new BadPathException(pathIterator.next());
     }
+
     Directory directory = (Directory) currentFile;
     String pathSegment = pathIterator.next();
     return directory.getChildFile(pathSegment)
