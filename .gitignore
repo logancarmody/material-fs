@@ -1,3 +1,4 @@
 .idea/
-target/
+target/*
+!target/material-fs-1.0-SNAPSHOT-jar-with-dependencies.jar
 material-fs.iml
