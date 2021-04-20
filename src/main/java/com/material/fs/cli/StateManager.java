@@ -72,6 +72,11 @@ public class StateManager {
         .orElseGet(() -> String.format("Error: %s is not a valid command.", baseCommand));
   }
 
+  public String getWelcomeMessage() {
+    return "Welcome to the Material Filesystem. Here are our supported commands:\n"
+        + _commandMap.keySet().stream().collect(Collectors.joining("\n"));
+  }
+
   /**
    * Get the Current Working Directory
    */

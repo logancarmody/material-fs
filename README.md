@@ -7,6 +7,8 @@ To build the JAR, run: `mvn clean compile assembly:single`
 
 This will produce a JAR called `material-fs-1.0-SNAPSHOT-jar-with-dependencies.jar` in the `target` directory.
 
+This file is currently version tracked for ease of execution (although not great practice).
+
 ## Running
 To run the CLI, you can execute: `java -cp target/material-fs-1.0-SNAPSHOT-jar-with-dependencies.jar com.material.fs.cli.CLI`
 from the root directory of the project.

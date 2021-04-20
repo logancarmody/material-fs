@@ -43,6 +43,7 @@ public class CLI {
       InputStream inStream = new FileInputStream(FileDescriptor.in);
       ConsoleReader reader = new ConsoleReader("App", inStream, System.out, null);
 
+      System.out.println(stateManager.getWelcomeMessage());
       handleCommands(reader, stateManager);
 
     } catch (IOException e) {
