@@ -17,8 +17,8 @@ public class FirstMatchingFileTSM extends SearchTSM<Optional<File>> {
 
   @Override
   public boolean shouldTerminate(File currentFile) {
-    // TODO if implemented differently we could binary search for the name
-    if (currentFile.isContentFile() && currentFile.getName().contains(_searchString)) {
+    // TODO change impl so if search string is prefix, we can do binary search
+    if (currentFile.getName().contains(_searchString)) {
       return true;
     }
     // Check that we still have more tree to search

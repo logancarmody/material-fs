@@ -9,7 +9,7 @@ import java.util.Optional;
 
 /**
  * This command allows you to search for files by filename.
- * This only searches for content files, not directories
+ * This will return files and directories
  * Syntax: "search <search string> --find-first"
  *
  * If --find-first is specified, the search command will return after finding the first matching file

@@ -20,7 +20,7 @@ public class AllMatchingFilesTSM extends SearchTSM<List<File>> {
 
   @Override
   public boolean shouldTerminate(File currentFile) {
-    if (currentFile.isContentFile() && currentFile.getName().contains(_searchString)) {
+    if (currentFile.getName().contains(_searchString)) {
       _matches.add(currentFile);
     }
     // Check that we still have more tree to search
