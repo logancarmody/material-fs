@@ -30,7 +30,7 @@ public class CreateFile extends Command {
     return "create";
   }
 
-  private class CreateFileCommand {
+  private class CreateFileCommand extends HelperCommand {
     @Parameter(description = "Path to the file to create", required = true)
     private String filePath;
 

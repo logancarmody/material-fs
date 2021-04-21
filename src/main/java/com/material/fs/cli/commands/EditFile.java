@@ -28,7 +28,7 @@ public class EditFile extends Command {
     return "edit";
   }
 
-  private class EditFileCommand {
+  private class EditFileCommand extends HelperCommand {
     @Parameter(description = "Path to the file to edit", required = true)
     private String filePath;
   }

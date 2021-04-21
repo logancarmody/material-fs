@@ -36,7 +36,7 @@ public class ShowStructure extends Command {
     return "show";
   }
 
-  private static class ShowStructureCommand {
+  private class ShowStructureCommand extends HelperCommand {
     @Parameter(description = "The path to list files. Default is cwd")
     private String pathToFile;
   }

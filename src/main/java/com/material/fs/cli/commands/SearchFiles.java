@@ -35,7 +35,7 @@ public class SearchFiles extends Command {
     return "search";
   }
 
-  private class SearchCommand {
+  private class SearchCommand extends HelperCommand {
     @Parameter(description = "The search string", required = true)
     String searchString;
     @Parameter(names = "--find-first")

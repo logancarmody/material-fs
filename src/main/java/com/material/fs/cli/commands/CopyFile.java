@@ -33,7 +33,7 @@ public class CopyFile extends Command {
     return "copy";
   }
 
-  private class CopyFileCommand {
+  private class CopyFileCommand extends HelperCommand {
     @Parameter(names = "--file", required = true)
     String startingFile;
     @Parameter(names = "--destination", required = true)

@@ -29,7 +29,7 @@ public class RemoveFile extends Command {
     return "rm";
   }
 
-  private class RemoveFileCommand {
+  private class RemoveFileCommand extends HelperCommand {
     @Parameter(description = "Path to the file to create", required = true)
     private String filePath;
 

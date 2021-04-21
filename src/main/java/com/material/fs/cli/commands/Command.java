@@ -1,5 +1,6 @@
 package com.material.fs.cli.commands;
 
+import com.beust.jcommander.Parameter;
 import com.material.fs.filesystem.models.Directory;
 import com.material.fs.filesystem.FileSystem;
 
@@ -41,4 +42,9 @@ public abstract class Command {
    * @return the name of the command. This should be the single String to invoke the command from the CLI.
    */
   public abstract String getName();
+
+  protected class HelperCommand {
+    @Parameter(help = true)
+    private String helpCommand;
+  }
 }

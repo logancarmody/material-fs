@@ -30,7 +30,7 @@ public class MakeDirectory extends Command {
     return "mkdir";
   }
 
-  private static class MakeDirectoryCommand {
+  private class MakeDirectoryCommand extends HelperCommand {
     @Parameter(description = "The file to create", required = true)
     private String pathToCreate;
 

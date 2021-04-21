@@ -41,7 +41,7 @@ public class ListFiles extends Command {
     return "ls";
   }
 
-  private static class ListFilesCommand {
+  private class ListFilesCommand extends HelperCommand {
     @Parameter(description = "The path to list files")
     private String pathToListFiles;
   }
